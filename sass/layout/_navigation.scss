@@ -1,14 +1,8 @@
 .sidebar {
     display: flex;
-    flex-direction: column;
-  
-    height: 100vh;
-    background: linear-gradient(135deg,
-                                $color-primary 0%,
-                                $color-primary 50%,
-                                $color-grey-dark 50%);
-    position: fixed;
+    background: linear-gradient(135deg, $color-primary 0%, $color-primary 50%, $color-grey-dark 50%);
     box-shadow: 2px 0 4px $color-grey-dark;
+    z-index: 9999;
 }
 
 .side-nav {
@@ -17,7 +11,6 @@
     margin-top: 3.5rem;
     &__item {
         position: relative;
-
         &:not(:last-child) {
             margin-bottom: .5rem;
         }
@@ -31,9 +24,7 @@
         width: 100%;
         background-color: $color-white;
         transform: scaleX(0);
-        transition: transform .3s, 
-                    height .3s cubic-bezier(1,0,0,1) .2s,
-                    background-color .1s;
+        transition: transform .3s, height .3s cubic-bezier(1, 0, 0, 1) .2s, background-color .1s;
     }
     &__item:hover::before {
         transform: scaleX(1);

@@ -6,48 +6,137 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Tokyo Salsa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Great+Vibes|Open+Sans:300,400,600" rel="stylesheet">
+
 
     <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
 </head>
 
 <body>
+    <div class="wrapper">
+        <nav class="sidebar">
+            <ul class="side-nav">
+                <li class="side-nav__item">
+                    <a href="#" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-home"></use>
+                        </svg>
+                        <span>Home</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-globe"></use>
+                        </svg>
+                        <span>Venues</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-calendar"></use>
+                        </svg>
+                        <span>Events</span>
+                    </a>
+                </li>
+                <li class="side-nav__item">
+                    <a href="#" class="side-nav__link">
+                        <svg class="side-nav__icon">
+                            <use xlink:href="img/sprite.svg#icon-mail"></use>
+                        </svg>
+                        <span>Contact</span>
+                    </a>
+                </li>
 
-    <nav class="sidebar">
-        <ul class="side-nav">
-            <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
-                    <svg class="side-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-home"></use>
-                    </svg>
-                    <span>Home</span>
-                </a>
-            </li>
-            <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
-                    <svg class="side-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-globe"></use>
-                    </svg>
-                    <span>Venues</span>
-                </a>
-            </li>
-            <li class="side-nav__item">
-                <a href="#" class="side-nav__link">
-                    <svg class="side-nav__icon">
-                        <use xlink:href="img/sprite.svg#icon-calendar"></use>
-                    </svg>
-                    <span>Events</span>
-                </a>
-            </li>
-        </ul>
-        <div class="social-icons">
-            
-        </div>
-    </nav>
+            </ul>
+            <div class="social-icons">
 
-    <main>
+            </div>
+        </nav>
+        <main class="main-content">
+            <header class="header">
+                <h1 class="header__heading">
+                    Tokyo Salsa
+                </h1>
+            </header>
 
-    </main>
+
+            <section class="section-featured">
+                <div class="heading-container">
+                    <h2 class="heading-container__secondary">
+                        Featured Venues
+                    </h2>
+                </div>
+                <div class="card">
+                    <div class="venue-card">
+                        <div class="venue-card__picture venue-card__picture--1">
+                            <p class="popular-venue">Popular!</p>
+                            <p class="location-venue">Roppongi, Tokyo</p>
+                        </div>
+                        <div class="venue-card__heading">
+                            Studio Pepe 2
+                        </div>
+                        <div class="venue-card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis adipisci explicabo quidem atque illo nesciunt nihil ullam
+                            doloribus voluptas vitae similique molestias, sit error laborum, consequuntur dicta repellendus
+                            quasi quibusdam?
+                        </div>
+                    </div>
+
+                    <div class="venue-card">
+                        <div class="venue-card__picture venue-card__picture--2">
+                            <p class="popular-venue">Popular!</p>
+                            <p class="location-venue">Roppongi</p>
+                        </div>
+                        <div class="venue-card__heading">
+                            Cafe Latino
+                        </div>
+                        <div class="venue-card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis adipisci explicabo quidem atque illo nesciunt nihil ullam
+                            doloribus voluptas vitae similique molestias, sit error laborum, consequuntur dicta repellendus
+                            quasi quibusdam?
+                        </div>
+                    </div>
+
+                    <div class="venue-card">
+                        <div class="venue-card__picture venue-card__picture--1">
+                            <p class="popular-venue">Popular!</p>
+                            <p class="location-venue">Roppongi</p>
+                        </div>
+                        <div class="venue-card__heading">
+                            Caribe
+                        </div>
+                        <div class="venue-card__description">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis adipisci explicabo quidem atque illo nesciunt nihil ullam
+                            doloribus voluptas vitae similique molestias, sit error laborum, consequuntur dicta repellendus
+                            quasi quibusdam?
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </section>
+
+            <section class="section-venue">
+                <div class="bg-video">
+                    <video class="bg-video__content" autoplay muted loop>
+                        <source src="img/pepe2-video.mp4" type="video/mp4"> Your browser is not supported
+                    </video>
+                </div>
+                <div class="venues-cta">
+                    <h3 class="venues-cta__heading">
+                        Check out all the dance locations in Tokyo
+                    </h3> 
+                    <button class="venues-cta__button">
+                        See More Venues
+                    </button>
+                </div>
+            </section>
+
+        </main>
+    </div>
 </body>
 
 </html>

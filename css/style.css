@@ -11,19 +11,157 @@ html {
 body {
   box-sizing: border-box; }
 
+.wrapper {
+  display: flex;
+  height: 100vh; }
+
+.main-content {
+  flex: 1 1 auto;
+  overflow: auto; }
+
 body {
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
   line-height: 1.7;
   color: #575757; }
 
-.sidebar {
+.header__heading {
+  font-size: 10rem;
+  font-family: 'Great Vibes', 'Open Sans', sans-serif;
+  align-self: center;
+  color: #fff;
+  text-shadow: 3px 5px 1px #575757, 3px 5px 1px #575757, 3px 5px 1px #575757, 3px 7px 1px #575757; }
+
+.heading-container {
+  height: 12rem;
+  display: flex;
+  justify-content: center;
+  border-bottom: 1px solid #ffd600; }
+  .heading-container__secondary {
+    align-self: center;
+    font-size: 2.6rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100;
+    letter-spacing: .2rem; }
+  .heading-container__secondary::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 2px;
+    background: #575757;
+    transition: width .3s ease-in-out; }
+  .heading-container__secondary:hover::after {
+    width: 100%; }
+
+.venues-cta {
   display: flex;
   flex-direction: column;
-  height: 100vh;
+  background-color: #575757;
+  padding: 4rem;
+  color: #fff;
+  box-shadow: 0 2rem 2rem rgba(87, 87, 87, 0.65);
+  opacity: .9; }
+  .venues-cta__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100; }
+  .venues-cta__button {
+    align-self: center;
+    height: 5rem;
+    width: 20rem;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: #fff200;
+    border-radius: 100px;
+    margin-top: 2rem;
+    cursor: pointer; }
+
+.section-venue {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  height: 50vh; }
+
+.card {
+  padding: 8rem 1.5rem;
+  display: flex;
+  justify-content: center;
+  background-color: #f5f5f5;
+  flex-wrap: wrap; }
+
+.venue-card {
+  font-size: 1.3rem;
+  border-radius: 4px;
+  overflow: hidden;
+  height: 45rem;
+  width: 30rem;
+  box-shadow: 0 1rem 1rem rgba(87, 87, 87, 0.15); }
+  .venue-card__heading {
+    font-family: 'Great Vibes';
+    font-size: 4rem;
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid #ffd600;
+    color: #fff;
+    background: linear-gradient(90deg, #fff200 0%, #fff200 10%, #575757 10%);
+    transition: all .4s ease-in; }
+  .venue-card__heading:hover {
+    background-position: 285px; }
+  .venue-card__picture {
+    position: relative;
+    background-size: cover;
+    height: 20rem;
+    background-blend-mode: screen; }
+    .venue-card__picture--1 {
+      background-image: linear-gradient(to bottom, black, #ffd600), url(../img/salsa-2.jpg); }
+    .venue-card__picture--2 {
+      background-image: linear-gradient(to bottom, black, #ffd600), url(../img/salsa-1.jpg); }
+  .venue-card__description {
+    padding: .5rem 2rem;
+    background-color: #fff; }
+
+.popular-venue {
+  position: absolute;
+  font-weight: 100;
+  top: 2rem;
+  right: 2rem;
+  color: #000;
+  background-color: #fff200;
+  border-radius: 8px;
+  padding: 0 .5rem;
+  box-shadow: 0.1rem 0.1rem 0.1rem #fff, 0.1rem 0.1rem 0.1rem #fff; }
+
+.location-venue {
+  position: absolute;
+  font-weight: 100;
+  bottom: 3rem;
+  left: 0rem;
+  color: #fff;
+  background-color: #575757;
+  padding: 0 .5rem; }
+
+.venue-card:not(:last-child) {
+  margin-right: 8rem; }
+
+.header {
+  display: flex;
+  justify-content: center;
+  height: 40vh;
+  background-image: linear-gradient(to right top, rgba(255, 255, 255, 0.8), rgba(87, 87, 87, 0.8)), url("../img/salsa-1.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative; }
+
+.sidebar {
+  display: flex;
   background: linear-gradient(135deg, #fff200 0%, #fff200 50%, #575757 50%);
-  position: fixed;
-  box-shadow: 2px 0 4px #575757; }
+  box-shadow: 2px 0 4px #575757;
+  z-index: 9999; }
 
 .side-nav {
   font-size: 1.4rem;
@@ -62,3 +200,16 @@ body {
     height: 2.5rem;
     margin-right: 1rem;
     fill: currentColor; }
+
+.bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  opacity: .45; }
+  .bg-video__content {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; }

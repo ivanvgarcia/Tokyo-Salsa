@@ -5,3 +5,66 @@ body {
     color: $color-grey-dark;
 }
 
+.header__heading {
+    font-size: 10rem;
+    font-family: 'Great Vibes', 'Open Sans', sans-serif;
+    align-self: center;
+    color: $color-white;
+    text-shadow: 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 7px 1px $color-grey-dark;
+}
+
+.heading-container {
+    height: 12rem;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid $color-primary-dark;
+    &__secondary {
+        align-self: center;
+        font-size: 2.6rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 100;
+        letter-spacing: .2rem;
+    }
+    &__secondary::after {
+        content: '';
+        display: block;
+        width: 0;
+        height: 2px;
+        background: $color-grey-dark;
+        transition: width .3s ease-in-out;
+    }
+    &__secondary:hover::after {
+        width: 100%; //transition: width .3s;
+
+    }
+}
+
+.venues-cta {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-grey-dark;
+    padding: 4rem;
+    color: $color-white;
+    box-shadow: 0 2rem 2rem rgba($color-grey-dark, .65);
+    opacity: .9;
+
+    &__heading {
+        font-size: 2rem;
+        text-transform: uppercase;
+        text-align: center;
+        font-weight: 100;
+    }
+
+    &__button {    
+        align-self: center;
+        height: 5rem;
+        width: 20rem;
+        font-size: 1.4rem;
+        text-transform: uppercase;
+        background-color: $color-primary;
+        border-radius: 100px;
+        margin-top: 2rem;
+        cursor: pointer;
+    }
+}

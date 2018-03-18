@@ -1,0 +1,11 @@
+.header {
+    display: flex;
+    justify-content: center;
+    height: 40vh;
+    background-image: linear-gradient(  to right top, rgba($color-white, 0.8), rgba($color-grey-dark, 0.8)), url("../img/salsa-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
