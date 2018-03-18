@@ -1,18 +1,21 @@
-//  ABSTRACT FILES
+//  ABSTRACT 
 @import "abstracts/functions";
 @import "abstracts/mixins";
 @import "abstracts/variables";
 
-//  BASE FILES
+//  BASE 
 @import "base/base";
 @import "base/animations";
 @import "base/typography";
 @import "base/utilities";
 
-//  PAGES FILES
+//  PAGES 
 @import "pages/home";
 
+// LAYOUT
 @import "layout/header";
 @import "layout/navigation";
 
+//COMPONENTS
 @import "components/bg-video";
+@import "components/small-cards";
