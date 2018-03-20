@@ -1,8 +1,9 @@
 .venue-card {
-    font-size: 1.3rem;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
     border-radius: 4px;
     overflow: hidden;
-    height: 45rem;
     width: 30rem;
     box-shadow: 0 1rem 1rem rgba($color-grey-dark, .15);
     transition: transform .3s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -33,22 +34,27 @@
         }
     }
     &__description {
+        padding: 1rem 1.5rem;
         display: flex;
-        padding: .5rem 2rem;
-        background-color: $color-white;
+        align-items: center;
+        flex: 1;
     }
-
     &__list {
         list-style: none;
     }
-
-    &__item {
-  
+    &__item:not(:last-child) {
+        margin-bottom: .5rem;
     }
-
     &__item-info {
         display: inline-block;
         width: 80px;
+        text-align: center;
+        color: $color-white;
+        margin-right: 1rem;
+        background-color: #9b59b6;
+        border-radius: 5px;
+        padding: .2rem .5rem;
+        box-shadow: $box-shadow-light;
     }
 }
 
@@ -81,4 +87,3 @@
     background-color: rgba($color-grey-dark, 1);
     padding: 0 .5rem;
 }
-
