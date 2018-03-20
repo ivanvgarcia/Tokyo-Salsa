@@ -33,8 +33,22 @@
         }
     }
     &__description {
+        display: flex;
         padding: .5rem 2rem;
         background-color: $color-white;
+    }
+
+    &__list {
+        list-style: none;
+    }
+
+    &__item {
+  
+    }
+
+    &__item-info {
+        display: inline-block;
+        width: 80px;
     }
 }
 
