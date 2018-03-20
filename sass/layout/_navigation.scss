@@ -2,9 +2,10 @@
     display: flex;
     justify-content: space-between;
     flex-direction: column;
-    background: linear-gradient(135deg, $color-primary 0%, $color-primary 50%, $color-grey-dark 50%);
+    background: linear-gradient(155deg, $color-primary 0%, $color-primary 50%, $color-grey-dark 50%);
     box-shadow: 2px 0 4px $color-grey-dark;
     z-index: 9999;
+    max-width: 18.5rem;
 }
 
 .side-nav {
