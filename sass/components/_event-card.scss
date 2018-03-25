@@ -1,0 +1,109 @@
+.ft-events {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.ft-events-card {
+    display: flex;
+    
+    box-shadow: 5px 5px 5px $color-grey-dark,
+                0 -1px 5px rgb(133, 133, 133);
+    
+    font-size: 1.4rem;
+    margin: 3rem 0;
+    &__information {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        flex: 1;
+        flex-direction: row;
+        max-width: 50rem;
+    }
+    &__date {
+        background-color: $color-secondary;
+        color: $color-white;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        padding: 1rem 2rem;
+    }
+    &__day {
+        font-size: 4rem;
+        font-weight: 100;
+        line-height: 1.2;
+    }
+    &__month {
+        font-size: 4rem;
+        font-weight: 600;
+        line-height: 1;
+        text-transform: uppercase;
+    }
+    &__year {
+        font-style: italic;
+    }
+    &__instructor {
+        overflow: hidden;
+        width: 15rem;
+        &--1 {
+            background-image: url(../img/mitsue.jpg);
+            background-size: cover;
+        }
+    }
+    &__instructor:hover &__name {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    &__name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: $color-white;
+        background-color: rgba($color-grey-dark, .8);
+        font-size: 2rem;
+        font-weight: 600;
+        transform: translateX(-10rem);
+        opacity: 0;
+        transition: all .3s ease-in;
+        width: 100%;
+        height: 100%;
+    }
+    &__title {
+        text-transform: uppercase;
+        width: 100%;
+        font-size: 2rem;
+        font-weight: 100;
+        text-align: center;
+        align-self: center;
+        background-color: $color-grey-dark;
+        color: $color-white;
+    }
+    &__info {
+        display: flex;
+        align-self: center;
+    }
+    &__info:not(:last-child) {
+        margin-bottom: .5rem;
+    }
+    &__image {
+        width: 2rem;
+        margin-right: 1rem;
+    }
+     &__description {
+         margin-right: 2rem;
+         align-self: center;
+     }
+    &__description:not(:last-child) {
+        margin-right: 2rem;
+    }
+
+    &__price {
+        margin-left: 1rem;
+        font-size: 1.1rem;
+        align-self: flex-end;
+        border-radius: 5px;
+        background-color: rgb(192, 32, 32);
+        color: $color-white;
+        padding: 0 1rem;
+    }
+}

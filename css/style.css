@@ -54,35 +54,11 @@ body {
   .heading-container__secondary:hover::after {
     width: 100%; }
 
-.venues-cta {
-  display: flex;
-  flex-direction: column;
-  background-color: #575757;
-  padding: 4rem;
-  color: #fff;
-  box-shadow: 0 2rem 2rem rgba(87, 87, 87, 0.65);
-  opacity: .9; }
-  .venues-cta__heading {
-    font-size: 2rem;
-    text-transform: uppercase;
-    text-align: center;
-    font-weight: 100; }
-  .venues-cta__button {
-    align-self: center;
-    height: 5rem;
-    width: 20rem;
-    font-size: 1.4rem;
-    text-transform: uppercase;
-    background-color: #9b59b6;
-    color: #fff;
-    border-radius: 100px;
-    margin-top: 2rem;
-    cursor: pointer;
-    outline: none; }
-
-.u-margin-top-bottom {
-  margin-top: 6rem;
+.u-margin-bottom {
   margin-bottom: 12rem; }
+
+.u-padding-top-bottom {
+  padding: 8rem 0 4rem 0; }
 
 .featured-venues-cards {
   display: flex;
@@ -170,7 +146,7 @@ body {
     width: 2.5rem;
     height: 2.5rem;
     fill: #fff200;
-    transition: transform .2s ease-in, outline .1s .2s ease-out; }
+    transition: transform .2s ease-in, outline .1s .2s ease-out; }
   .social-media__icon:hover {
     outline: 1px solid #9b59b6;
     transform: scale(1.3); }
@@ -188,11 +164,100 @@ body {
   height: 100%;
   width: 100%;
   z-index: -1;
-  opacity: .45; }
+  opacity: .45;
+  overflow: hidden; }
   .bg-video__content {
     width: 100%;
     height: 100%;
     object-fit: cover; }
+
+.ft-events {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+
+.ft-events-card {
+  display: flex;
+  box-shadow: 5px 5px 5px #575757, 0 -1px 5px #858585;
+  font-size: 1.4rem;
+  margin: 3rem 0; }
+  .ft-events-card__information {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex: 1;
+    flex-direction: row;
+    max-width: 50rem; }
+  .ft-events-card__date {
+    background-color: #9b59b6;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 1rem 2rem; }
+  .ft-events-card__day {
+    font-size: 4rem;
+    font-weight: 100;
+    line-height: 1.2; }
+  .ft-events-card__month {
+    font-size: 4rem;
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase; }
+  .ft-events-card__year {
+    font-style: italic; }
+  .ft-events-card__instructor {
+    overflow: hidden;
+    width: 15rem; }
+    .ft-events-card__instructor--1 {
+      background-image: url(../img/mitsue.jpg);
+      background-size: cover; }
+  .ft-events-card__instructor:hover .ft-events-card__name {
+    opacity: 1;
+    transform: translateX(0); }
+  .ft-events-card__name {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    background-color: rgba(87, 87, 87, 0.8);
+    font-size: 2rem;
+    font-weight: 600;
+    transform: translateX(-10rem);
+    opacity: 0;
+    transition: all .3s ease-in;
+    width: 100%;
+    height: 100%; }
+  .ft-events-card__title {
+    text-transform: uppercase;
+    width: 100%;
+    font-size: 2rem;
+    font-weight: 100;
+    text-align: center;
+    align-self: center;
+    background-color: #575757;
+    color: #fff; }
+  .ft-events-card__info {
+    display: flex;
+    align-self: center; }
+  .ft-events-card__info:not(:last-child) {
+    margin-bottom: .5rem; }
+  .ft-events-card__image {
+    width: 2rem;
+    margin-right: 1rem; }
+  .ft-events-card__description {
+    margin-right: 2rem;
+    align-self: center; }
+  .ft-events-card__description:not(:last-child) {
+    margin-right: 2rem; }
+  .ft-events-card__price {
+    margin-left: 1rem;
+    font-size: 1.1rem;
+    align-self: flex-end;
+    border-radius: 5px;
+    background-color: #c02020;
+    color: #fff;
+    padding: 0 1rem; }
 
 .venue-card {
   display: flex;
@@ -204,6 +269,10 @@ body {
   box-shadow: 0 1rem 1rem rgba(87, 87, 87, 0.15);
   transition: transform 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
   cursor: pointer; }
+  .venue-card:hover {
+    transform: scale(1.05); }
+  .venue-card:hover .venue-card__heading {
+    background-position: 285px; }
   .venue-card__heading {
     font-family: 'Great Vibes';
     font-size: 4rem;
@@ -213,8 +282,6 @@ body {
     color: #fff;
     background: linear-gradient(90deg, #fff200 0%, #fff200 10%, #575757 10%);
     transition: all .4s ease-in; }
-  .venue-card__heading:hover {
-    background-position: 285px; }
   .venue-card__picture {
     position: relative;
     background-size: cover;
@@ -233,19 +300,15 @@ body {
     list-style: none; }
   .venue-card__item:not(:last-child) {
     margin-bottom: .5rem; }
-  .venue-card__item-info {
+  .venue-card__item--info {
     display: inline-block;
     width: 80px;
     text-align: center;
     color: #fff;
     margin-right: 1rem;
-    background-color: #9b59b6;
+    background-color: #575757;
     border-radius: 5px;
-    padding: .2rem .5rem;
-    box-shadow: 0 1rem 1rem rgba(87, 87, 87, 0.15); }
-
-.venue-card:hover {
-  transform: scale(1.05); }
+    padding: .2rem .5rem; }
 
 .venue-card:not(:last-child) {
   margin-right: 8rem; }
@@ -269,3 +332,56 @@ body {
   color: #fff;
   background-color: #575757;
   padding: 0 .5rem; }
+
+.venues-cta {
+  display: flex;
+  flex-direction: column;
+  background-color: #575757;
+  padding: 4rem;
+  color: #fff;
+  box-shadow: 0 2rem 2rem rgba(87, 87, 87, 0.65);
+  opacity: .9; }
+  .venues-cta__heading {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: 100; }
+  .venues-cta__btn {
+    align-self: center;
+    font-size: 1.4rem;
+    text-transform: uppercase;
+    background-color: #fff200;
+    color: #fff;
+    border-radius: 100px;
+    margin-top: 2rem;
+    cursor: pointer;
+    outline: none;
+    position: relative;
+    overflow: hidden;
+    border: none;
+    transition: transform .3s, box-shadow .3s; }
+    .venues-cta__btn > * {
+      display: inline-block;
+      height: 100%;
+      width: 100%;
+      transition: all .2s; }
+    .venues-cta__btn-visible {
+      padding: 2rem 4rem;
+      color: #575757; }
+    .venues-cta__btn-invisible {
+      display: inline-block;
+      position: absolute;
+      padding: 2rem 4rem;
+      left: 0;
+      top: -100%; }
+    .venues-cta__btn:hover {
+      transform: scale(1.05);
+      box-shadow: 1px 2px 2px #000; }
+    .venues-cta__btn:active {
+      transform: scale(1);
+      box-shadow: 0.5px 0.5px 0.5px #000; }
+    .venues-cta__btn:hover .venues-cta__btn-visible {
+      transform: translateY(100%); }
+    .venues-cta__btn:hover .venues-cta__btn-invisible {
+      top: 0;
+      background-color: #9b59b6; }

@@ -8,6 +8,12 @@
     box-shadow: 0 1rem 1rem rgba($color-grey-dark, .15);
     transition: transform .3s cubic-bezier(0.47, 0, 0.745, 0.715);
     cursor: pointer;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &:hover &__heading {
+        background-position: 285px;
+    }
     &__heading {
         font-family: 'Great Vibes';
         font-size: 4rem;
@@ -17,9 +23,6 @@
         color: $color-white;
         background: linear-gradient(90deg, $color-primary 0%, $color-primary 10%, $color-grey-dark 10%);
         transition: all .4s ease-in;
-    }
-    &__heading:hover {
-        background-position: 285px;
     }
     &__picture {
         position: relative;
@@ -45,21 +48,16 @@
     &__item:not(:last-child) {
         margin-bottom: .5rem;
     }
-    &__item-info {
+    &__item--info {
         display: inline-block;
         width: 80px;
         text-align: center;
         color: $color-white;
         margin-right: 1rem;
-        background-color: #9b59b6;
+        background-color: $color-grey-dark;
         border-radius: 5px;
         padding: .2rem .5rem;
-        box-shadow: $box-shadow-light;
     }
-}
-
-.venue-card:hover {
-    transform: scale(1.05);
 }
 
 .venue-card:not(:last-child) {
