@@ -40,33 +40,3 @@ body {
     }
 }
 
-.venues-cta {
-    display: flex;
-    flex-direction: column;
-    background-color: $color-grey-dark;
-    padding: 4rem;
-    color: $color-white;
-    box-shadow: 0 2rem 2rem rgba($color-grey-dark, .65);
-    opacity: .9;
-
-    &__heading {
-        font-size: 2rem;
-        text-transform: uppercase;
-        text-align: center;
-        font-weight: 100;
-    }
-
-    &__button {    
-        align-self: center;
-        height: 5rem;
-        width: 20rem;
-        font-size: 1.4rem;
-        text-transform: uppercase;
-        background-color: $color-secondary;
-        color: $color-white;
-        border-radius: 100px;
-        margin-top: 2rem;
-        cursor: pointer;
-        outline: none;
-    }
-}
