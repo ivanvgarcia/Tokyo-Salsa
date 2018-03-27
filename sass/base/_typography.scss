@@ -5,13 +5,24 @@ body {
     color: $color-grey-dark;
 }
 
-.header__heading {
-    font-size: 10rem;
-    font-family: 'Great Vibes', 'Open Sans', sans-serif;
-    align-self: center;
-    color: $color-white;
-    text-shadow: 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 7px 1px $color-grey-dark;
+.header {
+    &__heading {
+        font-size: 10rem;
+        font-family: 'Great Vibes', 'Open Sans', sans-serif;
+        align-self: center;
+        color: $color-white;
+        text-shadow: 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 7px 1px $color-grey-dark;
+    }
+
+    &__sub-heading {
+        color: $color-white;
+        font-size: 2.5rem;
+        font-weight: 100;
+        text-shadow: 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 7px 1px $color-grey-dark;
+    }
+
 }
+
 
 .heading-container {
     height: 12rem;
@@ -36,7 +47,5 @@ body {
     }
     &__secondary:hover::after {
         width: 100%; //transition: width .3s;
-
     }
 }
-
