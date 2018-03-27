@@ -7,11 +7,11 @@
 .ft-events-card {
     display: flex;
     
-    box-shadow: 5px 5px 5px $color-grey-dark,
+    box-shadow: 0 5px 5px $color-grey-dark,
                 0 -1px 5px rgb(133, 133, 133);
     
     font-size: 1.4rem;
-    margin: 3rem 0;
+    margin: 2rem 0;
     &__information {
         display: flex;
         flex-wrap: wrap;
@@ -21,8 +21,8 @@
         max-width: 50rem;
     }
     &__date {
-        background-color: $color-secondary;
-        color: $color-white;
+        background-color: $color-primary;
+        color: $color-black;
         display: flex;
         flex-direction: column;
         text-align: center;
@@ -87,6 +87,7 @@
     }
     &__image {
         width: 2rem;
+        height: 2rem;
         margin-right: 1rem;
     }
      &__description {

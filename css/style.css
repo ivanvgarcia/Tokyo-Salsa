@@ -32,6 +32,12 @@ body {
   color: #fff;
   text-shadow: 3px 5px 1px #575757, 3px 5px 1px #575757, 3px 5px 1px #575757, 3px 7px 1px #575757; }
 
+.header__sub-heading {
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: 100;
+  text-shadow: 3px 5px 1px #575757, 3px 5px 1px #575757, 3px 5px 1px #575757, 3px 7px 1px #575757; }
+
 .heading-container {
   height: 12rem;
   display: flex;
@@ -58,7 +64,7 @@ body {
   margin-bottom: 12rem; }
 
 .u-padding-top-bottom {
-  padding: 8rem 0 4rem 0; }
+  padding: 6rem 0 4rem 0; }
 
 .featured-venues-cards {
   display: flex;
@@ -81,7 +87,9 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative; }
+  position: relative;
+  flex-direction: column;
+  text-align: center; }
 
 .sidebar {
   display: flex;
@@ -178,9 +186,9 @@ body {
 
 .ft-events-card {
   display: flex;
-  box-shadow: 5px 5px 5px #575757, 0 -1px 5px #858585;
+  box-shadow: 0 5px 5px #575757, 0 -1px 5px #858585;
   font-size: 1.4rem;
-  margin: 3rem 0; }
+  margin: 2rem 0; }
   .ft-events-card__information {
     display: flex;
     flex-wrap: wrap;
@@ -189,8 +197,8 @@ body {
     flex-direction: row;
     max-width: 50rem; }
   .ft-events-card__date {
-    background-color: #9b59b6;
-    color: #fff;
+    background-color: #fff200;
+    color: #000;
     display: flex;
     flex-direction: column;
     text-align: center;
@@ -244,6 +252,7 @@ body {
     margin-bottom: .5rem; }
   .ft-events-card__image {
     width: 2rem;
+    height: 2rem;
     margin-right: 1rem; }
   .ft-events-card__description {
     margin-right: 2rem;
