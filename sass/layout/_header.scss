@@ -1,8 +1,8 @@
 .header {
     display: flex;
     justify-content: center;
-    padding: 5rem 0;
-    background-image: linear-gradient( to right, rgba($color-black, 0.6), rgba($color-black, 0.6)), url("../img/salsa-1.jpg");
+    height: 40vh;
+    background-image: linear-gradient(  to right top, rgba($color-white, 0.8), rgba($color-grey-dark, 0.8)), url("../img/salsa-1.jpg");
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
@@ -12,6 +12,3 @@
     text-align: center;
 }
 
-.header--venues {
-    background-image: linear-gradient( to right, rgba($color-black, 0.6), rgba($color-black, 0.6)), url("../img/venues-header.jpg");
-}
