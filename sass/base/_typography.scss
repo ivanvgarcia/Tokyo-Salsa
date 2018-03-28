@@ -13,23 +13,20 @@ body {
         color: $color-white;
         text-shadow: 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 7px 1px $color-grey-dark;
     }
-
     &__sub-heading {
         color: $color-white;
-        font-size: 2.5rem;
+        font-size: 1.8rem;
         font-weight: 100;
-        text-shadow: 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 5px 1px $color-grey-dark, 3px 7px 1px $color-grey-dark;
+        font-style: italic;
+        text-transform: uppercase;
     }
-
 }
 
-
-.heading-container {
-    height: 12rem;
+.section-heading {
+    padding: 5rem;
     display: flex;
     justify-content: center;
-    border-bottom: 1px solid $color-secondary;
-    &__secondary {
+    &__main {
         align-self: center;
         font-size: 2.6rem;
         text-transform: uppercase;
@@ -37,7 +34,7 @@ body {
         font-weight: 100;
         letter-spacing: .2rem;
     }
-    &__secondary::after {
+    &__main::after {
         content: '';
         display: block;
         width: 0;
@@ -45,7 +42,17 @@ body {
         background: $color-secondary;
         transition: width .3s ease-in-out;
     }
-    &__secondary:hover::after {
+    &__main:hover::after {
         width: 100%; //transition: width .3s;
+    }
+}
+
+.footer {
+    &__heading {
+        font-size: 5rem;
+        font-family: 'Great Vibes', 'Open Sans', sans-serif;
+        align-self: center;
+        color: $color-white;
+        text-shadow: 3px 2px 1px $color-grey-dark, 3px 3px 1px $color-grey-dark, 3px 3px 1px $color-grey-dark, 3px 3px 1px $color-grey-dark;
     }
 }
