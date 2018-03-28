@@ -1,20 +1,41 @@
 .footer {  
     display: flex;
-    justify-content: center;
-    background-color: #272727;
-    font-size: 1.2rem;
+    
+    justify-content: space-between;
+    background-image: linear-gradient(  to right, rgba($color-black, 0.6), rgba($color-black, 0.6)), url("../img/salsa-1.jpg");
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+    &__nav li {
+      display: inline;
+      margin-right: 2rem;
+      font-size: 1.4rem;
+      font-weight: 100;
+    }
+
+    &__nav {
+        display: flex;
+align-items: center;
+margin: 0 auto;    }
     
     &__item {
-        list-style: none;
+        list-style: none; 
+      
     }
     &__link{
         text-decoration: none;
         text-transform: uppercase;
         color: $color-white;
+       
         
     }
     &__photo {
-       width: 20rem;
+       width: 20.7rem;
+
+       border: 2px solid $color-white;
+    
     }
 
 
