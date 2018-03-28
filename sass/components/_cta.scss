@@ -5,6 +5,8 @@
     padding: 4rem;
     color: $color-white;
     box-shadow: 0 2rem 2rem rgba($color-grey-dark, .65);
+    border: 3px #ffffff solid;
+    border-radius: 3px;
     opacity: .9;
     &__heading {
         font-size: 2rem;
@@ -18,13 +20,14 @@
         text-transform: uppercase;
         background-color: $color-primary;
         color: $color-white;
-        border-radius: 100px;
+        border-radius: 40px;
         margin-top: 2rem;
         cursor: pointer;
         outline: none;
         position: relative;
         overflow: hidden;
         border: none;
+        box-shadow: 1px 2px 2px $color-black;
         transition: transform .3s, box-shadow .3s;
         &>* {
             display: inline-block;

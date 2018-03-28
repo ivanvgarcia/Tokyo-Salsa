@@ -6,10 +6,7 @@
 
 .ft-events-card {
     display: flex;
-    
-    box-shadow: 0 5px 5px $color-grey-dark,
-                0 -1px 5px rgb(133, 133, 133);
-    
+   box-shadow: 0 1rem 1rem rgba($color-grey-dark, .55);
     font-size: 1.4rem;
     margin: 2rem 0;
     &__information {
@@ -90,14 +87,13 @@
         height: 2rem;
         margin-right: 1rem;
     }
-     &__description {
-         margin-right: 2rem;
-         align-self: center;
-     }
+    &__description {
+        margin-right: 2rem;
+        align-self: center;
+    }
     &__description:not(:last-child) {
         margin-right: 2rem;
     }
-
     &__price {
         margin-left: 1rem;
         font-size: 1.1rem;
