@@ -1,36 +1,44 @@
-.footer {
+.footer {  
     display: flex;
-    flex-direction: column;
-    background-image: linear-gradient( to right, rgba($color-black, 0.8), rgba($color-black, 0.8)), url("../img/salsa-2.jpg");
+    
+    justify-content: space-between;
+    background-image: linear-gradient(  to right, rgba($color-black, 0.6), rgba($color-black, 0.6)), url("../img/salsa-1.jpg");
     background-attachment: fixed;
-    background-position: top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    padding: 5rem 0;
     
     &__nav li {
-        display: inline;
-        font-size: 1.4rem;
-        font-weight: 100;
+      display: inline;
+      margin-right: 2rem;
+      font-size: 1.4rem;
+      font-weight: 100;
     }
-    &__nav li:not(:last-child) {
-        margin-right: 2rem;
-    }
+
     &__nav {
         display: flex;
-        align-items: center;
-        margin: 0 auto;
-    }
+align-items: center;
+margin: 0 auto;    }
+    
     &__item {
-        list-style: none;
+        list-style: none; 
+      
     }
-    &__link {
+    &__link{
         text-decoration: none;
         text-transform: uppercase;
         color: $color-white;
-        transition: all .3s;
+       
+        
     }
-    &__link:hover {
-        color: $color-secondary;
+    &__photo {
+       width: 20.7rem;
+
+       border: 2px solid $color-white;
+    
     }
+
+
+    
+    
 }
