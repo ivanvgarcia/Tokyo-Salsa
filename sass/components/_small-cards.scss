@@ -3,7 +3,6 @@
     flex-direction: column;
     font-size: 1.2rem;
     border-radius: 4px;
-    overflow: hidden;
     flex: 0 0 30rem;
     box-shadow: 0 1rem 1rem rgba($color-grey-dark, .15);
     transition: transform .3s cubic-bezier(0.47, 0, 0.745, 0.715);
@@ -23,12 +22,15 @@
         color: $color-white;
         background: linear-gradient(90deg, $color-primary 0%, $color-primary 10%, $color-grey-dark 10%);
         transition: all .4s ease-in;
+        transform: scale(1.05);
+        border-radius: 5px;
     }
     &__picture {
         position: relative;
         background-size: cover;
         height: 20rem;
         background-blend-mode: screen;
+        border-radius: 4px;
         &--1 {
             background-image: linear-gradient(to bottom, rgba($color-black, 1), rgba($color-secondary-dark, 1)), url(../img/salsa-2.jpg);
         }
@@ -45,18 +47,38 @@
     &__list {
         list-style: none;
     }
+    &__item {
+        position: relative;
+    }
+    &__item:not(:last-child)::before {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -4px;
+        height: 1px;
+        width: 50%;
+        transform: translateX(-50%);
+        background-color: $color-grey-dark;
+        border-radius: 60%;
+        opacity: .5;
+    }
     &__item:not(:last-child) {
-        margin-bottom: .5rem;
+        margin-bottom: 1rem;
     }
     &__item--info {
         display: inline-block;
-        width: 80px;
+        width: 3rem;
         text-align: center;
         color: $color-white;
-        margin-right: 1rem;
-        background-color: $color-grey-dark;
+        margin-right: .2rem;
+        background-color: $color-secondary-dark;
         border-radius: 5px;
         padding: .2rem .5rem;
+        transition: all .3s ease-in;
+    }
+
+    &__item:hover &__item--info {
+        background-color: $color-secondary;
     }
 }
 
