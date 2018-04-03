@@ -10,8 +10,14 @@
     position: relative;
     flex-direction: column;
     text-align: center;
-}
-
-.header--venues {
-    background-image: linear-gradient( to right, rgba($color-black, 0.6), rgba($color-black, 0.6)), url("../img/venues-header.jpg");
+    &--venues {
+        background-image: linear-gradient( to right, rgba($color-black, 0.6), rgba($color-black, 0.6)), url("../img/venues-header.jpg");
+    }
+    &--events {
+        background-image: linear-gradient( to top right, rgba($color-black, 0.6), rgba($color-primary, 0.6)), url("../img/event-header.jpg");
+         background-attachment: fixed;
+         background-position: 10% 60%;
+         background-repeat: no-repeat;
+         background-size: cover;
+    }
 }

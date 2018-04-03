@@ -1,0 +1,116 @@
+.event-schedule {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    flex-wrap: wrap;
+    &__box {
+        text-align: center;
+        flex: 1 25%;
+        cursor: pointer;
+    }
+    &__box:hover &__date {
+        transform: translateY(100%);
+    }
+    &__box:hover &__info {
+        transform: translateY(0);
+    }
+    &__date {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 40rem;
+        padding: 2rem 0;
+        transition: all .3s ease-in;
+        font-weight: 100;
+        font-size: 2rem;
+        &--yellow {
+            background-color: $color-primary;
+        }
+        &--grey {
+            background-color: $color-grey-dark;
+            color: $color-white;
+        }
+    }
+    &__day {
+        font-size: 6rem;
+        line-height: 1;
+    }
+    &__month {
+        font-size: 5rem;
+        line-height: 1.2;
+    }
+    &__year {
+        margin-bottom: 2rem;
+    }
+    &__info {
+        padding: 2rem 0;
+        position: absolute;
+        top: -100%;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        transition: all .3s ease-in;
+        color: $color-black;
+        background-image: linear-gradient( to bottom, rgba($color-grey-dark, 0.7), rgba($color-primary-dark, 0.7)), url("../img/event-header.jpg");
+        background-size: cover;
+        background-position: 90%;
+        color: $color-white;
+        font-size: 1.5rem;
+        justify-content: center;
+    }
+    &__header {
+        display: flex;
+        flex-direction: column;
+    }
+    &__title {
+        text-transform: uppercase;
+        font-weight: 100;
+        margin-bottom: .5rem;
+        font-size: 3rem;
+    }
+    &__photo {
+        width: 80px;
+        height: 80px;
+        align-self: center;
+        border-radius: 50%;
+        border: 2px solid #ffffff;
+    }
+    &__instructor {
+        font-weight: 100;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+    }
+    &__list {
+        display: flex;
+        flex-wrap: wrap;
+        list-style: none;
+        margin-bottom: 4rem;
+    }
+    &__item {
+        flex: 50%;
+    }
+    &__icon {
+        width: 30px;
+        height: 30px;
+    }
+    &__link:link,
+    &__link:visited {
+        display: inline-block;
+        background-color: $color-secondary-dark;
+        text-decoration: none;
+        padding: .8rem;
+        color: $color-white;
+        border-radius: 5px;
+        box-shadow: 0 2px 1px $color-secondary;
+        transition: all .2s ease-out;
+        transform: scale(1);
+    }
+    &__link:hover {
+        background-color: $color-secondary;
+        box-shadow: 0 2px 1px $color-secondary-dark;
+    }
+    &__link:active {
+        transform: scale(.95);
+        box-shadow: 0 1px 1px $color-secondary-dark;
+    }
+}

@@ -20,4 +20,9 @@
 .event-cta {
     display: flex;
     justify-content: center;
+    flex-direction: column;
+    &--bgcolor {
+        padding: 3rem 0;
+        background-color: #cacaca;
+    }
 }
