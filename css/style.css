@@ -88,6 +88,101 @@ body {
   position: relative;
   height: 50vh; }
 
+.event-schedule {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-wrap: wrap; }
+  .event-schedule__box {
+    text-align: center;
+    flex: 1 25%;
+    cursor: pointer; }
+  .event-schedule__box:hover .event-schedule__date {
+    transform: translateY(100%); }
+  .event-schedule__box:hover .event-schedule__info {
+    transform: translateY(0); }
+  .event-schedule__date {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40rem;
+    padding: 2rem 0;
+    transition: all .3s ease-in;
+    font-weight: 100;
+    font-size: 2rem; }
+    .event-schedule__date--yellow {
+      background-color: #fff200; }
+    .event-schedule__date--grey {
+      background-color: #575757;
+      color: #fff; }
+  .event-schedule__day {
+    font-size: 6rem;
+    line-height: 1; }
+  .event-schedule__month {
+    font-size: 5rem;
+    line-height: 1.2; }
+  .event-schedule__year {
+    margin-bottom: 2rem; }
+  .event-schedule__info {
+    padding: 2rem 0;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    transition: all .3s ease-in;
+    color: #3c3c3c;
+    background-image: linear-gradient(to bottom, rgba(87, 87, 87, 0.7), rgba(255, 214, 0, 0.7)), url("../img/event-header.jpg");
+    background-size: cover;
+    background-position: 90%;
+    color: #fff;
+    font-size: 1.5rem;
+    justify-content: center; }
+  .event-schedule__header {
+    display: flex;
+    flex-direction: column; }
+  .event-schedule__title {
+    text-transform: uppercase;
+    font-weight: 100;
+    margin-bottom: .5rem;
+    font-size: 3rem; }
+  .event-schedule__photo {
+    width: 80px;
+    height: 80px;
+    align-self: center;
+    border-radius: 50%;
+    border: 2px solid #ffffff; }
+  .event-schedule__instructor {
+    font-weight: 100;
+    font-size: 2rem;
+    margin-bottom: 1rem; }
+  .event-schedule__list {
+    display: flex;
+    flex-wrap: wrap;
+    list-style: none;
+    margin-bottom: 4rem; }
+  .event-schedule__item {
+    flex: 50%; }
+  .event-schedule__icon {
+    width: 30px;
+    height: 30px; }
+  .event-schedule__link:link, .event-schedule__link:visited {
+    display: inline-block;
+    background-color: #573980;
+    text-decoration: none;
+    padding: .8rem;
+    color: #fff;
+    border-radius: 5px;
+    box-shadow: 0 2px 1px #9b59b6;
+    transition: all .2s ease-out;
+    transform: scale(1); }
+  .event-schedule__link:hover {
+    background-color: #9b59b6;
+    box-shadow: 0 2px 1px #573980; }
+  .event-schedule__link:active {
+    transform: scale(0.95);
+    box-shadow: 0 1px 1px #573980; }
+
 .header {
   display: flex;
   justify-content: center;
@@ -103,11 +198,11 @@ body {
   .header--venues {
     background-image: linear-gradient(to right, rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url("../img/venues-header.jpg"); }
   .header--events {
-    background-image: linear-gradient(to right, rgba(60, 60, 60, 0.6), rgba(60, 60, 60, 0.6)), url("../img/event-header.jpg");
+    background-image: linear-gradient(to top right, rgba(60, 60, 60, 0.6), rgba(255, 242, 0, 0.6)), url("../img/event-header.jpg");
     background-attachment: fixed;
-    background-position: top;
+    background-position: 10% 60%;
     background-repeat: no-repeat;
-    background-size: contain; }
+    background-size: cover; }
 
 .sidebar {
   display: flex;
