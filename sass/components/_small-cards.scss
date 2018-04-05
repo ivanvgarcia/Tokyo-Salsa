@@ -96,6 +96,7 @@
     border-radius: 8px;
     padding: 0 .5rem;
     box-shadow: .1rem .1rem .1rem $color-white, .1rem .1rem .1rem $color-white;
+    opacity: .92;
 }
 
 .location-venue {
@@ -106,4 +107,5 @@
     color: $color-white;
     background-color: rgba($color-grey-dark, 1);
     padding: 0 .5rem;
+    opacity: .8;
 }
