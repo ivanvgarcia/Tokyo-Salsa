@@ -7,11 +7,15 @@
 }
 
 html {
+    box-sizing: border-box;
     font-size: 62.5%;
 }
 
 body {
-    box-sizing: border-box;
+    font-family: $font-primary;
+    color: $color-grey-dark;
+    font-weight: 300;
+    line-height: 1.6;
 }
 
 // Makes the navigation menu scroll down the page
