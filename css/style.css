@@ -6,10 +6,14 @@
   box-sizing: inherit; }
 
 html {
+  box-sizing: border-box;
   font-size: 62.5%; }
 
 body {
-  box-sizing: border-box; }
+  font-family: "Open Sans";
+  color: #575757;
+  font-weight: 300;
+  line-height: 1.6; }
 
 .wrapper {
   display: flex;
@@ -18,12 +22,6 @@ body {
 .main-content {
   flex: 1 1 auto;
   overflow: auto; }
-
-body {
-  font-family: 'Open Sans', sans-serif;
-  font-weight: 400;
-  line-height: 1.7;
-  color: #575757; }
 
 .header__heading {
   font-size: 10rem;
@@ -71,7 +69,7 @@ body {
   margin-bottom: 6rem; }
 
 .u-margin-bottom {
-  margin-bottom: 12rem; }
+  margin-bottom: 10rem; }
 
 .u-padding-top-bottom {
   padding-bottom: 4rem; }
@@ -186,7 +184,7 @@ body {
 .venue-content {
   display: flex;
   flex-wrap: wrap;
-  margin: 10rem 20rem; }
+  margin: 10rem 10rem; }
   .venue-content__header {
     display: flex;
     justify-content: space-around;
@@ -206,13 +204,13 @@ body {
   .venue-content__location-icon {
     margin-right: .5rem; }
   .venue-content__heading {
-    font-size: 2.8rem;
+    font-size: 2.4rem;
     font-weight: 100;
     letter-spacing: .1rem;
-    background-color: #573980;
+    background-color: #575757;
     color: #fff;
     margin-bottom: 1.5rem;
-    width: 50%;
+    max-width: 50%;
     padding: .2rem 1rem;
     border-radius: 4px;
     text-align: center; }
@@ -225,21 +223,19 @@ body {
   .venue-content__gallery {
     display: flex;
     flex: 50%;
-    flex-wrap: wrap;
-    align-self: flex-end; }
+    flex-wrap: wrap; }
   .venue-content__gallery:hover .venue-content__photo:hover {
-    transform: scale(1.5);
+    transform: scale(1.2);
     z-index: 10;
     border: 3px #fff200 solid; }
   .venue-content__gallery:hover .venue-content__photo:not(:hover) {
     filter: blur(0.8px);
     transform: scale(0.95); }
   .venue-content__photo {
-    width: 49%;
+    width: 40%;
     margin: .3rem;
     transform: scale(1);
-    transition: all .2s ease-in;
-    cursor: pointer; }
+    transition: all .2s ease-in; }
 
 .header {
   display: flex;
@@ -520,11 +516,12 @@ body {
   font-size: 1.2rem;
   border-radius: 4px;
   flex: 0 0 30rem;
-  box-shadow: 0 1rem 1rem rgba(87, 87, 87, 0.15);
+  background-color: #f1f1f1;
   transition: transform 0.3s cubic-bezier(0.47, 0, 0.745, 0.715);
-  cursor: pointer; }
+  overflow: hidden;
+  margin: 3rem 5rem; }
   .venue-card:hover {
-    transform: scale(1.05); }
+    transform: scale(1.02); }
   .venue-card:hover .venue-card__heading {
     background-position: 285px; }
   .venue-card__heading {
@@ -535,15 +532,12 @@ body {
     border-bottom: 1px solid #ffd600;
     color: #fff;
     background: linear-gradient(90deg, #fff200 0%, #fff200 10%, #575757 10%);
-    transition: all .4s ease-in;
-    transform: scale(1.05);
-    border-radius: 5px; }
+    transition: all .4s ease-in; }
   .venue-card__picture {
     position: relative;
     background-size: cover;
     height: 20rem;
-    background-blend-mode: screen;
-    border-radius: 4px; }
+    background-blend-mode: screen; }
     .venue-card__picture--1 {
       background-image: linear-gradient(to bottom, #3c3c3c, #573980), url(../img/salsa-2.jpg); }
     .venue-card__picture--2 {
@@ -556,7 +550,15 @@ body {
   .venue-card__list {
     list-style: none; }
   .venue-card__item {
-    position: relative; }
+    position: relative;
+    font-size: 1.4rem;
+    font-weight: 700; }
+  .venue-card__item a:link,
+  .venue-card__item a:visited {
+    text-decoration: none;
+    color: currentColor; }
+  .venue-card__item a:hover {
+    color: #9b59b6; }
   .venue-card__item:not(:last-child)::before {
     content: "";
     position: absolute;
@@ -572,19 +574,25 @@ body {
     margin-bottom: 1rem; }
   .venue-card__item--info {
     display: inline-block;
-    width: 3rem;
+    width: 2.5rem;
     text-align: center;
-    color: #fff;
+    color: #573980;
     margin-right: .2rem;
-    background-color: #573980;
     border-radius: 5px;
     padding: .2rem .5rem;
     transition: all .3s ease-in; }
   .venue-card__item:hover .venue-card__item--info {
+    color: #9b59b6; }
+  .venue-card__btn:link, .venue-card__btn:visited {
+    color: #fff;
+    background-color: #573980;
+    text-decoration: none;
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.6rem;
+    transition: all .3s ease-in; }
+  .venue-card__btn:hover {
     background-color: #9b59b6; }
-
-.venue-card {
-  margin: 5rem 6rem; }
 
 .popular-venue {
   position: absolute;
